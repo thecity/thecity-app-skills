@@ -17,4 +17,11 @@ class User < ActiveRecord::Base
 
   has_many :user_skills, :dependent => :destroy
   has_many :skills, :through => :user_skills  
+
+
+  def full_name
+    fname = self.nickname.nil? ? self.first_name : self.nickname
+    [fname, self.last_name].join(' ')
+  end
+  
 end
