@@ -21,11 +21,12 @@ class DatabaseSetup < ActiveRecord::Migration
     create_table :skills do |t|
       t.integer :external_id, :null => false
       t.string :name, :null => false
+      t.integer :user_count, :null => false, :default => 0
     end
 
     create_table :user_skills do |t|
-      t.references :skills
-      t.references :users
+      t.integer :skill_id
+      t.integer :user_id
     end    
   end
 

@@ -14,13 +14,14 @@
 ActiveRecord::Schema.define(:version => 20120825044013) do
 
   create_table "skills", :force => true do |t|
-    t.integer "external_id", :null => false
-    t.string  "name",        :null => false
+    t.integer "external_id",                :null => false
+    t.string  "name",                       :null => false
+    t.integer "user_count",  :default => 0, :null => false
   end
 
   create_table "user_skills", :force => true do |t|
-    t.integer "skills_id"
-    t.integer "users_id"
+    t.integer "skill_id"
+    t.integer "user_id"
   end
 
   create_table "users", :force => true do |t|

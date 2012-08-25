@@ -15,7 +15,7 @@ namespace :city do
         skill_list.each do |city_skill|
           city_skill_ids << city_skill.id
           if Skill.where(:external_id => city_skill.id).exists?
-            puts "Found #{city_skill.name}"
+            puts "Found #{city_skill.name} (#{city_skill.id})"
           else
             Skill.create({:external_id => city_skill.id, :name => city_skill.name})
             puts "Created #{city_skill.name}"
@@ -53,7 +53,7 @@ namespace :city do
         user_list.each do |city_user|
           city_user_ids << city_user.id
           if User.where(:external_id => city_user.id).exists?
-            puts "Found #{[city_user.full_name]}"
+            puts "Found #{city_user.full_name}"
           else
             begin
               User.create({:external_id => city_user.id, 
@@ -75,6 +75,19 @@ namespace :city do
               puts "Created #{city_user.full_name}"
             rescue
               puts "Failed to create user #{city_user.full_name}"
+            end
+          end
+
+
+          user = User.find_by_external_id(city_user.id)
+          unless user.nil?
+            city_user.skills.each do |user_skill|
+              # skill = Skill.find_by_external_id(user_skill.skill_id)
+              skill = Skill.find_by_name(user_skill.name)
+              unless skill.nil? or UserSkill.where({:user_id => user.id, :skill_id => skill.id}).exists?
+                puts "  - #{skill.name} ADDED"
+                UserSkill.create({:user_id => user.id, :skill_id => skill.id})
+              end
             end
           end
         end
