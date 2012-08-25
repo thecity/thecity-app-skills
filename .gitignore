@@ -13,3 +13,19 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+.bundle
+.DS_Store
+coverage.data
+coverage/*
+.sass-cache/*
+db/*.sqlite3
+log/*
+tmp/*
+vendor/bundle/*
+report.html
+public/assets/*
+public/system/*
+public/uploads/*
+
+data/*/~$*

@@ -1,4 +1,16 @@
 ThecityAppSkills::Application.routes.draw do
+
+  root :to => 'skills#index'
+
+  ##################################################################
+  ## Signin / Forgot / Etc. ##
+  ##################################################################
+  get 'logout' => 'sessions#destroy', :as => 'logout'
+  get 'login' => 'sessions#new', :as => 'login'
+  get 'forgot_password' => 'sessions#forgot_password', :as => 'forgot_password'
+  
+  resources :sessions, :only => [:create]
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
