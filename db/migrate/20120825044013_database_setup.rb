@@ -16,7 +16,6 @@ class DatabaseSetup < ActiveRecord::Migration
       t.datetime :memberized_at
       t.datetime :last_engaged_at
       t.datetime :last_logged_in_at
-      t.string :password_digest
     end
 
     create_table :skills do |t|
