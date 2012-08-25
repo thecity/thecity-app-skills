@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(:version => 20120825044013) do
     t.datetime "memberized_at"
     t.datetime "last_engaged_at"
     t.datetime "last_logged_in_at"
-    t.string   "password_digest"
   end
 
 end
