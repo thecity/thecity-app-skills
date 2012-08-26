@@ -27,10 +27,10 @@ ActiveRecord::Schema.define(:version => 20120825044013) do
   create_table "users", :force => true do |t|
     t.integer  "external_id",                            :null => false
     t.boolean  "active",               :default => true, :null => false
-    t.string   "first_name",                             :null => false
+    t.string   "first_name"
     t.string   "nickname"
-    t.string   "last_name",                              :null => false
-    t.string   "gender",                                 :null => false
+    t.string   "last_name"
+    t.string   "gender"
     t.string   "email"
     t.string   "primary_phone"
     t.string   "primary_phone_type"

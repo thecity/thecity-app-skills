@@ -114,10 +114,15 @@ namespace :city do
   task :sync => ['sync:skills', 'sync:users']
 
 
+
   def clean_date(date)
-    return nil #if date.nil?
-    # 05/15/2012 12:24 AM (UTC)
-    #DateTime.parse("05/15/2012 12:24 AM (UTC)",'%d/%m/%Y %I:%M %p')
+    if date.blank?
+      nil
+    elsif date.include?('UTC')
+      DateTime.strptime(date,'%m/%d/%Y %I:%M %p')
+    else
+      Date.strptime(date, '%m/%d/%Y')
+    end
   end
 
 end
