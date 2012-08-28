@@ -7,6 +7,7 @@ class SkillsController < ApplicationController
 
   def show
     @skill = Skill.includes(:users).find(params[:id])
+    
     @users = @skill.users
   end
 
