@@ -2,12 +2,12 @@ module SkillsHelper
 
   def display_phone_numbers(user)
     phones = []
-    if !user.primary_phone.blank?
+    unless user.primary_phone.blank?
       ltr = user.primary_phone_type.first.downcase
       phones << "(#{ltr}) #{user.primary_phone}"
     end
 
-    if !user.secondary_phone.blank?
+    unless user.secondary_phone.blank?
       ltr = user.secondary_phone_type.first.downcase
       phones << "(#{ltr}) #{user.secondary_phone}"
     end

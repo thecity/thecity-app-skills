@@ -1,7 +1,8 @@
 .email_form
-  = form_tag(send_email_skills_path(params[:id])) do
+  = form_tag(send_email_skills_path) do
     Message
     %br
     = text_area_tag(:message)
     %br
+    = hidden_field_tag(:user_id, params[:id])
     = submit_tag('send')

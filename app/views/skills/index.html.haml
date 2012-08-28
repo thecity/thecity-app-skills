@@ -7,6 +7,7 @@
 %ul
   - if @skills.size == 0
     %li No Skills Found
-
-  - @skills.each do |skill|
-    %li= link_to("#{skill.name} (#{skill.user_count})", skill_path(skill.id))
+ 
+  - else  
+    - @skills.each do |skill|
+      %li= link_to("#{skill.name} (#{skill.user_count})", skill_path(skill.id))
