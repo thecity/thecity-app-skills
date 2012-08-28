@@ -1,0 +1,19 @@
+%table#users
+  %thead
+    %tr
+      %th Name
+      %th Contact
+      %th Membership
+      %th Last Engaged
+      %th Last Login
+      %th Options
+
+  %tbody
+    - @users.each do |user|
+      %tr
+        %td= user.full_name
+        %td= display_phone_numbers(user)
+        %td= display_time(user.memberized_at)
+        %td= display_time(user.last_engaged_at)
+        %td= display_time(user.last_logged_in_at)
+        %td= display_options(user)

@@ -1,1 +1,7 @@
-send_email.html.haml
+= link_to('Return to Skills', skills_path)
+%br
+%br
+- if @errors
+  Unable to send message.
+- else
+  Email successfully sent!

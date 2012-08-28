@@ -19,6 +19,8 @@ class User < ActiveRecord::Base
   has_many :skills, :through => :user_skills  
 
 
+  scoped_search :in => :skills, :on => [:name]
+
   def full_name
     fname = self.nickname.nil? ? self.first_name : self.nickname
     [fname, self.last_name].join(' ')

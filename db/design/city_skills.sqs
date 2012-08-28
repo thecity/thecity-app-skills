@@ -104,7 +104,7 @@
         </location>
         <size>
             <width>201.000000</width>
-            <height>360.000000</height>
+            <height>340.000000</height>
         </size>
         <zorder>0</zorder>
         <SQLField>
@@ -212,12 +212,6 @@
             <type><![CDATA[datetime]]></type>
             <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
             <uid><![CDATA[703D961F-7BDE-4AF5-8BBB-7E169A174636]]></uid>
-        </SQLField>
-        <SQLField>
-            <name><![CDATA[password_digest]]></name>
-            <type><![CDATA[string]]></type>
-            <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
-            <uid><![CDATA[5DE9D3E6-A9C8-4593-92F5-C85FC9B8E7CC]]></uid>
         </SQLField>
         <didChangeNameDuringValidation><![CDATA[0]]></didChangeNameDuringValidation>
         <temporaryOriginalName><![CDATA[Table1]]></temporaryOriginalName>
@@ -378,8 +372,8 @@ U2l6ZT1mZn2hgWQCgRgDhoaG
         <SourceSplitViewState><![CDATA[2 -240 780]]></SourceSplitViewState>
         <uid><![CDATA[6D60C294-37C0-4EC3-B053-09DC045DF8DA]]></uid>
         <windowHeight><![CDATA[668.000000]]></windowHeight>
-        <windowLocationX><![CDATA[422.000000]]></windowLocationX>
-        <windowLocationY><![CDATA[360.000000]]></windowLocationY>
+        <windowLocationX><![CDATA[2845.000000]]></windowLocationX>
+        <windowLocationY><![CDATA[656.000000]]></windowLocationY>
         <windowWidth><![CDATA[789.000000]]></windowWidth>
     </SQLDocumentInfo>
     <AllowsIndexRenamingOnInsert><![CDATA[1]]></AllowsIndexRenamingOnInsert>

@@ -1,3 +1,9 @@
+.search_bar
+  = form_tag(search_skills_path) do
+    = search_field_tag(:query)
+    = submit_tag('Search')
+
+
 %ul
   - if @skills.size == 0
     %li No Skills Found

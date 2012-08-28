@@ -1,0 +1,1 @@
+DEVELOPER_EMAIL = 'some_email@example.com'
