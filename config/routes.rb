@@ -5,7 +5,11 @@ ThecityAppSkills::Application.routes.draw do
   ##################################################################
   ## Skills ##
   ##################################################################
-  resources :skills, :only => [:index, :show]
+  resources :skills, :only => [:index, :show] do
+    member do
+      get :email_new
+    end
+  end
 
   resource :skills, :only => [] do
     member do

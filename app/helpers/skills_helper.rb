@@ -27,7 +27,7 @@ module SkillsHelper
     
     [ link_to_function('Skills', 'show_user_skills_list( $(this) )') + 
         hidden_field_tag("user_#{user.id}", skills, {:class => 'skills'} ),
-      link_to_function('Email', 'show_user_email_form( $(this) )') + 
+      link_to('Email', email_new_skill_path) + 
         hidden_field_tag("user_email_#{user.id}", user.id, {:class => 'user_id'}) ].join(' | ').html_safe
   end
 

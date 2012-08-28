@@ -1,0 +1,7 @@
+.email_form
+  = form_tag(send_email_skills_path(params[:id])) do
+    Message
+    %br
+    = text_area_tag(:message)
+    %br
+    = submit_tag('send')
