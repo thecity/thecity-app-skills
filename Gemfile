@@ -41,3 +41,5 @@ gem 'debugger'
 # The City Admin plugin
 gem 'typhoeus'
 gem 'the-city-admin', :require => 'the_city_admin'
+
+gem 'quiet_assets', :group => :development
