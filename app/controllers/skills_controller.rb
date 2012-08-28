@@ -20,7 +20,7 @@ class SkillsController < ApplicationController
 
 
   def email_new
-
+    # nothing to do here
   end
 
   def send_email
