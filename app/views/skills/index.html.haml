@@ -4,8 +4,8 @@
       .navbar-inner
         .container
           %a.brand{:href => "javascript:void(0)"} Skills on The City
-          = form_tag(search_skills_path, :class => "search-query pull-right") do
-            = search_field_tag(:query, nil, {:class => "search-query", :placeholder => "search skills", :type => "text"})
+          = form_tag(search_skills_path, :class => "navbar-search search-query pull-right") do
+            = search_field_tag(:query, nil, {:class => "search-query", :placeholder => "search skills", :type => "tex"})
             = submit_tag('Search', {:class => "btn"})
 
 

@@ -8,7 +8,7 @@ class SkillsController < ApplicationController
   def show
     @skill = Skill.includes(:users).find(params[:id])
     
-    @users = @skill.users
+    @users = @skill.users * 10
   end
 
   
