@@ -26,8 +26,13 @@ class SkillsController < ApplicationController
 
   def send_email
     if params[:user_id].present? and params[:message].present? and User.exists?(params[:user_id])
-      user = User.find(params[:user_id])
-      UserMailer.welcome_email(@user).deliver
+      user = User.find_by_id(params[:user_id])
+
+      if user.nil?
+        @errors = 'User not found'
+      else
+        UserMailer.you_have_mail(user, params[:message]).deliver
+      end
     end
   end
 

@@ -1,8 +1,12 @@
 .email_form
-  = form_tag(send_email_skills_path) do
-    Message
-    %br
-    = text_area_tag(:message)
-    %br
-    = hidden_field_tag(:user_id, params[:id])
-    = submit_tag('send')
+  = form_tag(send_email_skills_path, {:class => 'form-horizontal'}) do
+    .control-group
+      %label{:class => 'control-label', :for => 'message'} Message
+      .controls
+        = text_area_tag(:message, nil, {:rows => 5, :style => 'width: 400px'})
+        = hidden_field_tag(:user_id, params[:id])
+
+    .control-group
+      .controls
+        = link_to_function('Cancel', 'javascript:history.back()', {:class => 'btn btn-link'})
+        = submit_tag('Send', {:class => 'btn'})
