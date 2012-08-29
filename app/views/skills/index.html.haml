@@ -1,13 +1,18 @@
-.search_bar
-  = form_tag(search_skills_path) do
-    = search_field_tag(:query)
-    = submit_tag('Search')
+.container
+  .span8
+    .navbar
+      .navbar-inner
+        .container
+          %a.brand{:href => "javascript:void(0)"} Skills on The City
+          = form_tag(search_skills_path, :class => "search-query pull-right") do
+            = search_field_tag(:query, nil, {:class => "search-query", :placeholder => "search skills", :type => "text"})
+            = submit_tag('Search', {:class => "btn"})
 
 
-%ul
-  - if @skills.size == 0
-    %li No Skills Found
+    %ul
+      - if @skills.size == 0
+        %li No Skills Found
  
-  - else  
-    - @skills.each do |skill|
-      %li= link_to("#{skill.name} (#{skill.user_count})", skill_path(skill.id))
+      - else  
+        - @skills.each do |skill|
+          %li= link_to("#{skill.name} (#{skill.user_count})", skill_path(skill.id))
