@@ -19,8 +19,8 @@ Assuming you have the *bundler* gem installed then run *bundle install*.
 
 Add your church's City API Token and API Key to [RAILS_ROOT]/config/city_keys.yml
 
-    tca_key = '**** YOUR CITY API KEY ****'
-    tca_token = '**** YOUR CITY API TOKEN ****'
+    tca_key: '**** YOUR CITY API KEY ****'
+    tca_token: '**** YOUR CITY API TOKEN ****'
 
 
 Next you will need to create your local database 
