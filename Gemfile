@@ -13,12 +13,12 @@ gem 'typhoeus'
 gem 'the-city-admin', :require => 'the_city_admin'
 
 
-group :assets do
+#group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'uglifier', '>= 1.0.3'
-end
+#end
 
-group :development do
+#group :development do
   gem 'debugger'
   gem 'quiet_assets'
-end
+#end
