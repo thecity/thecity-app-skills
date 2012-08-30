@@ -9,40 +9,40 @@ Note: This app has only been tested with Ruby 1.9.2 but should work with other v
 
 Clone this repo
 
-  $ git clone git://github.com/thecity/thecity-app-skills.git
+    git clone git://github.com/thecity/thecity-app-skills.git
 
 
 Assuming you have the *bundler* gem installed then run *bundle install*.
 
-  $ bundle install
+    bundle install
 
 
 Add your church's City API Token and Key to [RAILS_ROOT]/config/initializers/the_city_admin.rb
 
-  $ TCA_ENV = 'development'
-  $ TCA_KEY = '**** YOUR KEY ****'
-  $ TCA_TOKEN = '**** YOUR TOKEN ****'
+    TCA_ENV = 'development'
+    TCA_KEY = '**** YOUR KEY ****'
+    TCA_TOKEN = '**** YOUR TOKEN ****'
 
 
 Next you will need to create your local database 
 
-  $ rake db:crate
-  $ rake db:migrate
+    rake db:crate
+    rake db:migrate
 
 
 Finally you will sync the data.
 
-  $ rake city:sync
+    rake city:sync
 
 
 Start Rails
 
-  $ rails s
+    rails s
 
 
 Open a browser
 
-  $ http://localhost:3000
+    http://localhost:3000
 
 
 
