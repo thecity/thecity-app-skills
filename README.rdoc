@@ -7,42 +7,42 @@ This app sets a local database of skills and users with what is on your church's
 
 Note: This app has only been tested with Ruby 1.9.2 but should work with other version of Ruby also.
 
-* Clone this repo
+Clone this repo
 
-  git clone git://github.com/thecity/thecity-app-skills.git
-
-
-* Assuming you have the *bundler* gem installed then run *bundle install*.
-
-  bundle install
+  $ git clone git://github.com/thecity/thecity-app-skills.git
 
 
-* Add your church's City API Token and Key to [RAILS_ROOT]/config/initializers/the_city_admin.rb
+Assuming you have the *bundler* gem installed then run *bundle install*.
 
-  TCA_ENV = 'development'
-  TCA_KEY = '**** YOUR KEY ****'
-  TCA_TOKEN = '**** YOUR TOKEN ****'
+  $ bundle install
 
 
-* Next you will need to create your local database 
+Add your church's City API Token and Key to [RAILS_ROOT]/config/initializers/the_city_admin.rb
 
-  rake db:crate
-  rake db:migrate
-
-
-* Finally you will sync the data.
-
-  rake city:sync
+  $ TCA_ENV = 'development'
+  $ TCA_KEY = '**** YOUR KEY ****'
+  $ TCA_TOKEN = '**** YOUR TOKEN ****'
 
 
-* Start Rails
+Next you will need to create your local database 
 
-  rails s
+  $ rake db:crate
+  $ rake db:migrate
 
 
-* Open a browser
+Finally you will sync the data.
 
-  http://localhost:3000
+  $ rake city:sync
+
+
+Start Rails
+
+  $ rails s
+
+
+Open a browser
+
+  $ http://localhost:3000
 
 
 
@@ -59,7 +59,7 @@ This project is released under the MIT license (see LICENSE).
 This project is maintained by Wes Hays (https://github.com/weshays).
 
 
-== Other Contributors
+== Contributors
 
 Mark Flores: https://github.com/markjflores
 
