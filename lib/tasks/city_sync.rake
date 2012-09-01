@@ -27,6 +27,7 @@ namespace :city do
         else
           page += 1
           puts "### => Page #{page}/#{skill_list.total_pages}"
+          sleep(2) # Sleep 2 seconds
         end
       end
 
@@ -98,6 +99,7 @@ namespace :city do
         else
           page += 1
           puts "### => Page #{page}/#{user_list.total_pages}"
+          sleep(2) # Sleep 2 seconds
         end
       end
 
