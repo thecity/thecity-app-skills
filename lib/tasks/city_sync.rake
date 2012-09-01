@@ -9,7 +9,7 @@ namespace :city do
       city_skill_ids = []
       done = false
       page = 1
-      unless done
+      while !done
         skill_list = TheCity::SkillList.new({:page => page})
 
         skill_list.each do |city_skill|
@@ -26,6 +26,7 @@ namespace :city do
           done = true
         else
           page += 1
+          puts "### => Page #{page}/#{skill_list.total_pages}"
         end
       end
 
@@ -47,7 +48,7 @@ namespace :city do
       city_user_ids = []
       done = false
       page = 1
-      unless done
+      while !done
         user_list = TheCity::UserList.new({:page => page})
 
         user_list.each do |city_user|
@@ -96,6 +97,7 @@ namespace :city do
           done = true
         else
           page += 1
+          puts "### => Page #{page}/#{user_list.total_pages}"
         end
       end
 
