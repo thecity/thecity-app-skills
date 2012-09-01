@@ -11,3 +11,5 @@ else
   TCA_KEY = ENV['TCA_KEY']
   TCA_TOKEN = ENV['TCA_TOKEN']
 end
+
+TCA_ENV = Rails.env
